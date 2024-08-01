@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Rushi Bank</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #ffffff;
+        }
+        .navbar {
+            background-color: #007bff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .navbar a {
+            color: #ffffff;
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h2 class="text-white">Rushi Bank</h2>
+        <div class="float-right">
+            <a href = "{{ url_for('Profile') }}">My Profile</a>
+            <a href = "{{ url_for('Logout') }}">Logout</a>
+        </div>
+    </div>
+
+    <div class="container">
+      <center>  <h2>Welcome to Rushi Bank</h2> </center>
+        </div>
+        <div class = "container">
+            <div class = "row">
+                <div class = "col-md-1"></div>
+                <div class = "col-md-4">
+                    <a href = "{{ url_for('TransferHistory') }}">
+                    <img src="https://paytmblogcdn.paytm.com/wp-content/uploads/2021/11/12_-5-steps-to-check-Paytm-wallet-transaction-history.jpg" width = "150" height="150">
+                    Transaction History
+                </a>
+                </div>
+                <div class="col-md-4">
+                    <a href = "{{ url_for('BankTransfer') }}">
+                    <img src="https://cdn4.vectorstock.com/i/1000x1000/89/73/colorful-background-transaction-in-cash-vector-15208973.jpg" width = "150" height="150">
+                    BankTransfer 
+                </a>
+                </div>
+                <div class="col-md">
+                    <a href ="{{ url_for('Balance') }}">
+                    <img src="https://cdn4.iconfinder.com/data/icons/usa-dollar-4/512/xxx039-512.png" width = "150" height="150">
+                    Balance Enquiry
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

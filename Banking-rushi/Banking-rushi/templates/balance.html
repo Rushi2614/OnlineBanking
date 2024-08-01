@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Balance Inquiry</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #ffffff;
+        }
+        h2 {
+            color: #007bff;
+        }
+        .balance-details {
+            margin-top: 20px;
+        }
+        .update-balance-form {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center">Balance Inquiry</h2>
+        
+        <div class="balance-details">
+            <p><strong>Name:</strong> {{ name }}</p>
+            <p><strong>Account Number:</strong> {{ account_number }}</p>
+            <p><strong>Balance:</strong> Rs. {{ balance }}</p>
+        </div>
+
+        <form action="{{ url_for('UpdateBalance') }}" method = "post" class="update-balance-form">
+            <div class="form-group">
+                <label for="new_balance">Update Balance:</label>
+                <input type="number" class="form-control" id="new_balance" name="new_balance" step="0.01" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
